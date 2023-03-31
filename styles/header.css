@@ -1,5 +1,5 @@
 .header {
-  height: 55px;
+  height: 56px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,29 +9,28 @@
   right: 0;
   z-index: 100;
   background-color: white;
-  border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 .left-section {
   display: flex;
   align-items: center;
+  margin-left: 14px;
 }
 
 .hamburger-menu {
   height: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
 }
 
 .youtube-logo {
   height: 20px;
+  margin-left: 16px;
 }
 
 .middle-section {
   flex: 1;
-  margin-left: 70px;
-  margin-right: 35px;
-  max-width: 500px;
+  margin-left: 90px;
+  margin-right: 84px;
+  max-width: 640px;
   display: flex;
   align-items: center;
 }
@@ -39,74 +38,91 @@
 .search-bar {
   flex: 1;
   height: 36px;
-  padding-left: 10px;
+  padding-left: 16px;
   font-size: 16px;
-  border: 1px solid rgb(192, 192, 192);
-  border-radius: 2px;
-  box-shadow: inset 1px 2px 3px rgb(0, 0, 0, 0.05);
+  font-weight: 300;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 20px 0 0 20px;
+  box-shadow: inset 1px 2px 2px rgb(0, 0, 0, 0.05);
   width: 0;
+  z-index: 50;
 }
-
 .search-bar::placeholder {
   font-size: 16px;
+  color: rgb(138, 138, 138);
 }
+.search-bar:focus {
+  outline: none;
+  border: 1px solid rgb(42, 79, 199);}
 
 .search-button {
   height: 40px;
-  width: 66px;
-  background-color: rgb(235, 235, 235);
-  border: 1px solid rgb(192, 192, 192);
+  width: 64px;
+  background-color: rgb(248, 248, 248);
+  border: 1px solid rgb(204, 204, 204);
   margin-left: -1px;
-  margin-right: 10px;
+  margin-right: 12px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.search-icon {
+  height: 24px;
 }
 
 .search-button,
 .voice-search-button,
-.upload-icon-container,
-.youtube-apps-icon-container,
-.notifications-icon-container {
+.upload-icon-button,
+.notifications-icon-button,
+.hamburger-menu-button {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-
 .search-button .tooltip,
 .voice-search-button .tooltip,
-.upload-icon-container .tooltip,
-.youtube-apps-icon-container .tooltip,
-.notifications-icon-container .tooltip {
+.upload-icon-button .tooltip,
+.notifications-icon-button .tooltip {
   position: absolute;
-  background-color: gray;
+  background-color: rgb(106, 106, 106);
   color: white;
-  padding: 4px 8px;
-  border-radius: 2px;
+  font-weight: 300;
+  padding: 10px 8px;
+  border-radius: 4px;
   font-size: 12px;
-  bottom: -30px;
+  bottom: -50px;
   opacity: 0;
   transition: opacity 0.15s;
   pointer-events: none;
   white-space: nowrap;
 }
-
 .search-button:hover .tooltip,
 .voice-search-button:hover .tooltip,
-.upload-icon-container:hover .tooltip,
-.youtube-apps-icon-container:hover .tooltip,
-.notifications-icon-container:hover .tooltip {
+.upload-icon-button:hover .tooltip,
+.notifications-icon-button:hover .tooltip {
   opacity: 1;
 }
-
-.search-icon {
-  height: 25px;
-}
-
-.voice-search-button {
+.voice-search-button,
+.upload-icon-button,
+.notifications-icon-button,
+.hamburger-menu-button {
   height: 40px;
   width: 40px;
   border-radius: 20px;
   border: none;
-  background-color: rgb(235, 235, 235);
+  background-color: white;
+  transition: background-color 0.15s;
+}
+.voice-search-button:hover,
+.upload-icon-button:hover,
+.notifications-icon-button:hover,
+.hamburger-menu-button:hover {
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
 }
 
 .voice-search-icon {
@@ -114,8 +130,8 @@
 }
 
 .right-section {
-  width: 180px;
-  margin-right: 20px;
+  width: 140px;
+  margin-right: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -126,22 +142,18 @@
   height: 24px;
 }
 
-.youtube-apps-icon {
-  height: 24px;
-}
-
 .notifications-icon {
   height: 24px;
 }
 
-.notifications-icon-container {
+.notifications-icon-button {
   position: relative;
 }
 
 .notifications-count {
   position: absolute;
-  top: -2px;
-  right: -5px;
+  top: 1px;
+  right: 3px;
   background-color: rgb(200, 0, 0);
   color: white;
   font-size: 11px;
@@ -152,4 +164,8 @@
 .current-user-picture {
   height: 32px;
   border-radius: 16px;
+  margin-left: 10px;
+}
+.current-user-picture:hover {
+  cursor: pointer;
 }

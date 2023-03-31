@@ -1,0 +1,45 @@
+.genre-bar {
+  display: flex;
+  column-gap: 12px;
+  position: fixed;
+  background-color: white;
+  padding: 12px 0;
+  align-items: center;
+  z-index: 100;
+  top: 54px;
+  left: 94px;
+  right: 48px;
+  overflow: hidden;
+}
+
+.genre-bar button {
+  background-color: rgb(240, 240, 240);
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+.genre-bar button:hover {
+  cursor: pointer;
+  background-color: rgb(225, 225, 225);
+}
+
+.genre-bar .genre-bar-now,
+.genre-bar .genre-bar-now:hover {
+  background-color: black;
+  color: white;
+}
+
+.genre-bar div {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgb(255, 255, 255, 1),rgba(255,255,255,1));
+  position: absolute;
+  right: 0px;
+  width: 66px;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+}
